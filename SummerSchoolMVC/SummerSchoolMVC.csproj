@@ -235,6 +235,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Hogwarts_Castle_in_the_Daethly_Hallows.png" />
     <Content Include="Models\SummerSchoolModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SummerSchoolModel.edmx</DependentUpon>

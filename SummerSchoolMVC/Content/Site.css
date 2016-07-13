@@ -3,6 +3,15 @@
     padding-bottom: 20px;
 }
 
+.jumbotron {
+    background-image: url('../Images/Hogwarts_Castle_in_the_Daethly_Hallows.png') !important;
+    color:#ffffff
+}
+
+p{
+    font-size:150%;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
