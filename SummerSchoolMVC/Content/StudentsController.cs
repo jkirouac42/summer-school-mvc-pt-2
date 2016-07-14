@@ -48,29 +48,31 @@ namespace SummerSchoolMVC.Content
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "StudentID,FirstName,LastName,")] Student student)
         {
-            int cellNumber = db.Students.Count();
-            
+             int enrollmentCount = db.Students.Count();
 
-            if (student.LastName.ToLower() == "Potter")
-                {
-                student.EnrollmentFee = 100;
-                }
 
-            else if (student.LastName.ToLower() == "Longbottom")
+            if (student.LastName.ToLower() == "potter")
             {
-                student.EnrollmentFee = 0;
-                if (cellNumber < 10)
-                  {
-                    student.EnrollmentFee = 200;
-                  }
+                student.EnrollmentFee = 100;
             }
 
-            else if (student.FirstName.First() == student.LastName.First())
+            if (student.LastName.ToLower() == "longbottom")
+            {
+                student.EnrollmentFee = 0;
+                if (enrollmentCount <= 10)
+                {
+                    student.EnrollmentFee = 200;
+                }
+            }
+
+            if (student.FirstName.First() == student.LastName.First())
             {
                 student.EnrollmentFee = 180;
             }
 
-            else student.EnrollmentFee = 200;
+            else {
+                student.EnrollmentFee = 200;
+            }
 
             if (ModelState.IsValid)
                 {
