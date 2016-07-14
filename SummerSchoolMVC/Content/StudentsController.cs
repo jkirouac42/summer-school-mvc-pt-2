@@ -59,7 +59,7 @@ namespace SummerSchoolMVC.Content
             else if (student.LastName.ToLower() == "Longbottom")
             {
                 student.EnrollmentFee = 0;
-                if (cellNumber < 3)
+                if (cellNumber < 10)
                   {
                     student.EnrollmentFee = 200;
                   }
