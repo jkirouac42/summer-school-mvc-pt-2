@@ -2,16 +2,14 @@
     padding-top: 50px;
     padding-bottom: 20px;
     position: relative;
-    background-image:url('../backgroundw.jpg');
+    background-image: url('../fog.jpg');
 }
 
 .jumbotron {
-   
-   color:#ffffff;
-    font-style:italic;
-    background-image:url(../Images/Hogwarts_Castle_in_the_Daethly_Hallows.png);
-    font-family:fantasy;
-    
+    color: #000000;
+    font-style: italic;
+    font-family: fantasy;
+    background-image: url('../Hogwarts_Castle_in_the_Daethly_Hallows3.png');
 }
 
 .home{
@@ -21,7 +19,7 @@
 }
 
 .j1{
-    color:#ffffff;
+    color:#000000;
     font-family:'Times New Roman', Times, serif;
     font-size:300%;
 }

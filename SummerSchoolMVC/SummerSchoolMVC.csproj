@@ -229,13 +229,16 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="background.png" />
     <Content Include="backgroundw.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fog.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Hogwarts_Castle_in_the_Daethly_Hallows3.png" />
     <Content Include="Images\Hogwarts_Castle_in_the_Daethly_Hallows.png" />
     <Content Include="Models\SummerSchoolModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -312,6 +315,10 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Shared\Malfoy.cshtml" />
+    <Content Include="Views\Shared\Riddle.cshtml" />
+    <Content Include="Views\Shared\Voldemort.cshtml" />
+    <Content Include="Views\Students\EnrollmentCosts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

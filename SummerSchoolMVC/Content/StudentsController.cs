@@ -17,6 +17,7 @@ namespace SummerSchoolMVC.Content
         // GET: Students
         public ActionResult Index()
         {
+            ViewBag.TotalFees = TotalEnrollmentFees();
             return View(db.Students.ToList());
         }
 
@@ -48,6 +49,8 @@ namespace SummerSchoolMVC.Content
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "StudentID,FirstName,LastName,")] Student student)
         {
+      
+
              int enrollmentCount = db.Students.Count();
 
 
@@ -64,6 +67,20 @@ namespace SummerSchoolMVC.Content
                     student.EnrollmentFee = 200;
                 }
             }
+            if (student.LastName.ToLower() == "malfoy")
+            {
+                return View("Malfoy");
+            }
+            if (student.LastName.ToLower() == "riddle")
+            {
+                student.EnrollmentFee = 200;
+                return View("Riddle");
+            }
+            if (student.LastName.ToLower() == "voldemort")
+            {
+                student.EnrollmentFee = 200;
+                return View("Voldemort");
+            }
 
             if (student.FirstName.First() == student.LastName.First())
             {
@@ -73,6 +90,12 @@ namespace SummerSchoolMVC.Content
             else {
                 student.EnrollmentFee = 200;
             }
+
+            
+
+
+
+
 
             if (ModelState.IsValid)
                 {
@@ -84,6 +107,16 @@ namespace SummerSchoolMVC.Content
             return View(student);
         }
 
+         public decimal TotalEnrollmentFees()
+        { decimal totalFees;
+            totalFees = (from student in db.Students
+                         select student.EnrollmentFee).Sum();
+            
+            return totalFees;
+            
+        }
+
+       
         // GET: Students/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -97,6 +130,7 @@ namespace SummerSchoolMVC.Content
                 return HttpNotFound();
             }
             return View(student);
+            
         }
 
         // POST: Students/Edit/5
@@ -149,5 +183,7 @@ namespace SummerSchoolMVC.Content
             }
             base.Dispose(disposing);
         }
+
+       
     }
 }
